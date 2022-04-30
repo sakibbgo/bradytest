@@ -1,0 +1,16 @@
+#In this console application, I am continuously monitoring a path for specific XML file.
+I have an assumption that the format of the XML file is fixed. It is only data that can change.
+As soon as the file is placed on the desired folder, the application picks it up, passes all the values and place then in some data structure for calculation. 
+After doing the required calculation according to the task, an output XML is created that follows the format of a given output XML file. 
+
+#Learning some C# an building the app was done simultaneously. I googled to find out what kind of c# feature can be used for different part of the task. For example using XmlDocuent to manipulate XML file. No help from any expert c# programmer was taken to improve design as I wanted to showcase my learning and applying ability without any help.  
+The task was divided in three part. Parsing the XML, Processing values, providing output for ease of progress. 
+
+
+#Notes
+- Input and Output path need to be fixed on a local environment before the ap can be launched. 
+- Sometimes, the application can't access the input file due to process running in the background. Cleanly stopping the app again and trying again after a restart fixes it. 
+- I have written a lot of code under onCreateEvent as codes outside do not shows output unless the monitoring is stopped. Probably applying some async programming can solve that to make a better design of the app. 
+- I tried to use some classes to separate responsibility but a class has only one responsibility principle was not always preserved as it will need more learning and thinking for me. My initial focus was making something that works and then I improved as much as I can within the time. 
+
+- If I get more time, I will explore async programming to be able to write code outside monitor event and show results without stopping the service. For now, most of the function call was done from the creation event to see output while monitoring.   
